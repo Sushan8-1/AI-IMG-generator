@@ -1,12 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&display=swap'); */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Permanent Marker";
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -14,21 +12,21 @@
 :root {
     --color-primary: #adadad;
     --color-primary-dark: #ffffff;
-    --color-accent: #8B5CF6;
-    --color-card: #FFFFFF;
-    --color-input: #F1F1FF;
+    --color-accent: #d0af8c;
+    --color-card: #ffffff;
+    --color-input: #ffffff;
     --color-text: #09090E;
-    --color-placeholder: #5C5A87;
+    --color-placeholder: #444444;
     --color-border: #D4D4ED;
-    --color-gradient: linear-gradient(135deg, #5C56E1, #8B5CF6);
+    --color-gradient: linear-gradient(135deg, #d0af8c, #825b31);
 }
 
 body.dark-theme {
-    --color-card: #1E293B;
-    --color-input: #141B2D;
-    --color-text: #F3F4F6;
-    --color-placeholder: #A3B6DC;
-    --color-border: #334155;
+    --color-card: #111827;
+    --color-input: #1F2937;
+    --color-border: #374151;
+    --color-text: #F9FAFB;
+    --color-placeholder: #ffffff;
     background: var(--color-card);
     transition: background 0.3s ease;
 }
@@ -45,7 +43,7 @@ body {
     min-height: 100vh;
     padding: 15px;
     color: var(--color-text);
-    background: linear-gradient(#d9d9d9, #b7b7b7);
+    background: #ebcfb2;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -55,67 +53,10 @@ body {
     max-width: 900px;
     padding: 32px;
     border-radius: 23px;
-
-    background: rgba(255, 255, 255, 0.45);
+    background: rgb(255, 255, 255);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
     overflow: hidden;
-}
-
-.container::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-
-    background: linear-gradient(270deg,
-            #5C56E1,
-            #8B5CF6,
-            #00D4FF,
-            #5C56E1);
-
-    background-size: 300% 300%;
-    animation: borderMove 6s linear infinite;
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-
-    pointer-events: none;
-}
-
-.container::after {
-    content: "";
-    position: absolute;
-    inset: 2px;
-    border-radius: calc(23px - 2px);
-
-    background: transparent;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.container>* {
-    position: relative;
-    z-index: 1;
-}
-
-@keyframes borderMove {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
 }
 
 .header {
@@ -201,7 +142,7 @@ body {
 .prompt-container .prompt-input:focus {
     outline: none;
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+    box-shadow: 0 0 0 1px rgba(235, 207, 178, 0.5);
 }
 
 .prompt-container .prompt-btn {
@@ -287,7 +228,7 @@ body {
 
 .prompt-actions .generate-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(109, 40, 217, 0.3);
+    box-shadow: 0 4px 10px rgb(235, 207, 178);
 }
 
 main-content .gallery-grid:has(.img-card) {
